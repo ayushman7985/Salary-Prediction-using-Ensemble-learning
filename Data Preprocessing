@@ -1,0 +1,12 @@
+# Handle missing values
+df.fillna(method='ffill', inplace=True)
+
+# Convert categorical column to numerical (if any)
+if 'Education Level' in df.columns:
+    le = LabelEncoder()
+    df['Education Level'] = le.fit_transform(df['Education Level'])
+
+# Features and target
+X = df.drop('Salary', axis=1)
+y = df['Salary']
+
