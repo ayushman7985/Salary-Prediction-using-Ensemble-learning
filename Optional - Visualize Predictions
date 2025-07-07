@@ -1,0 +1,6 @@
+plt.figure(figsize=(10, 6))
+plt.scatter(y_test, vr.predict(X_test), color='blue')
+plt.xlabel("Actual Salary")
+plt.ylabel("Predicted Salary")
+plt.title("Voting Regressor: Actual vs Predicted")
+plt.show()
