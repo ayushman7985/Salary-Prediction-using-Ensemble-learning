@@ -1,0 +1,6 @@
+models = {'Random Forest': rf, 'Gradient Boosting': gb, 'Voting Regressor': vr}
+
+for name, model in models.items():
+    y_pred = model.predict(X_test)
+    print(f"{name} R2 Score: {r2_score(y_test, y_pred):.2f}")
+    print(f"{name} RMSE: {np.sqrt(mean_squared_error(y_test, y_pred)):.2f}\n")
